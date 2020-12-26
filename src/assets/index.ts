@@ -1,34 +1,33 @@
 import Colors from './colors';
 import Fonts from './fonts';
 import Images from './images';
-import I18nTran from './languages';
 
 class Themes {
-    colors = null;
-    images = null;
-    fonts = null;
-    constructor(colors, fonts, images) {
-        this.colors = colors;
-        this.fonts = fonts;
-        this.images = images;
+    colors: Colors;
+    images: Images;
+    fonts: Fonts;
+    constructor(color: Colors, font: Fonts, image: Images) {
+        this.colors = color;
+        this.fonts = font;
+        this.images = image;
     }
-    setAll(name) {
+    setAll(name: string) {
         this.colors.setThemes(name);
         this.fonts.setThemes(name);
         this.images.setThemes(name);
     }
 
-    getColor(name) {
-        return (theme) => {
+    getColor(name: string) {
+        return (theme: string) => {
             return this.colors.getColor(name, theme);
         };
     }
 
-    getFont(name) {
+    getFont(name: string) {
         return this.fonts.getFont(name);
     }
 
-    getImages(name) {
+    getImages(name: string) {
         return this.images.getImage(name);
     }
 }

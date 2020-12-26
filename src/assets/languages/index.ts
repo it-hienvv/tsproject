@@ -34,8 +34,8 @@ class Translate {
         locale,
     }: {
         key: string;
-        option: string;
-        locale: string;
+        option?: object;
+        locale?: string;
     }) {
         return this.i18n.t(key, option, {
             locale,
