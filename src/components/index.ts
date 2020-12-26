@@ -1,5 +1,6 @@
-const a = 10;
+import AppButton from './button';
+import AppView from './view';
+import AppText from './text';
+import {ModalLoading, ModalView, ManagerModal} from './modal-view';
 
-const calculator = (): number => a;
-
-export {calculator};
+export {AppButton, AppView, AppText, ModalLoading, ModalView, ManagerModal};
