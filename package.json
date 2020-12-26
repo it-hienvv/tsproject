@@ -49,6 +49,7 @@
         "@commitlint/config-conventional": "^11.0.0",
         "@react-native-community/eslint-config": "^1.1.0",
         "@types/": "react-navigation/native",
+        "@types/i18n-js": "^3.0.3",
         "@types/jest": "^25.2.3",
         "@types/react-native": "^0.63.2",
         "@types/react-redux": "^7.1.14",

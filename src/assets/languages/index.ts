@@ -1,11 +1,11 @@
-import I18nTran from 'i18n-js';
+import I18nTran, {TranslateOptions} from 'i18n-js';
 import vi from './list/vi';
 import en from './list/en';
 
 class Translate {
-    i18n = null;
+    i18n: TranslateOptions;
     language = 'vi';
-    constructor(i18) {
+    constructor(i18: TranslateOptions) {
         this.i18n = i18;
         this.i18n.fallbacks = true;
         this.i18n.defaultLocale = this.language;
@@ -21,14 +21,22 @@ class Translate {
         };
     }
 
-    setLanguage(lang) {
+    setLanguage(lang: string) {
         this.language = lang;
         this.i18n.fallbacks = true;
         this.i18n.defaultLocale = this.language;
         this.i18n.locale = this.language;
     }
 
-    translate({key, option, locale}) {
+    translate({
+        key,
+        option,
+        locale,
+    }: {
+        key: string;
+        option: string;
+        locale: string;
+    }) {
         return this.i18n.t(key, option, {
             locale,
         });
